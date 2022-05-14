@@ -1,0 +1,168 @@
+
+/*general*/
+
+*{
+	margin: 0;
+}
+
+
+#todo-container{
+	margin: 0 auto;
+	height: auto;
+	width: 50%;
+	background-color: deepskyblue;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.header-style{
+	font-family: monospace;
+	color: whitesmoke;
+}
+
+/*description*/
+
+#description{
+	margin: 0 auto;
+	background: linear-gradient(whitesmoke,deepskyblue);
+	width: 95%;
+}
+
+#description h4{
+ margin: 0;
+ font-family: sans-serif;
+}
+
+/*category*/
+
+#category h4{
+    font-family: sans-serif;
+	margin: 0;
+}
+
+#category{
+	display: inline-block;
+    width: 47%;
+	background: linear-gradient(whitesmoke,deepskyblue);
+    
+}
+
+#category select{
+	height: 2.7rem;
+	width: 100%;
+}
+
+/*due date*/
+
+#due-date h4{
+    font-family: sans-serif;
+	margin: 0;
+}
+
+
+#due-date{
+	display: inline-block;
+	width: 47%;
+	background: linear-gradient(whitesmoke,deepskyblue);
+ }
+
+#description,#category{
+	margin: 0 0 0.8rem 1rem;
+}
+
+#description input{
+	width: 98.7%;
+	height: 2.5rem;
+}
+
+
+#due-date input{
+	height: 2.5rem;
+	width: 98.2%;
+}
+
+
+/*add button*/
+
+.add-btn{
+	position: absolute;
+	left: 42%;
+}
+
+.add-btn button{
+    background-color: whitesmoke;
+    padding: 10px;
+    border: none;
+}
+
+
+.add-btn button:hover{
+	background-color: yellow;
+}
+
+.make-inline-block{
+	display: inline-block;
+}
+
+/*catogary div*/
+
+.cat-btn{
+	height: 2rem;
+	width: 4rem;
+	background-color: deepskyblue;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+    margin-left: 7rem;
+    margin-bottom: 2rem;
+}
+
+/*todo-list-item*/
+
+.checkbox-align{
+	margin: 1rem 1rem 0 2rem;
+}
+
+.checkbox-align:checked + p{
+	text-decoration: line-through;
+}
+
+input[type=checkbox]:checked + p {
+  color:red;
+  text-decoration: line-through;
+}
+
+.date-align{
+	margin-left: 2rem;
+}
+
+.todo-list-item{
+	background-color: dodgerblue;
+	margin: 1rem 0;
+}
+
+.font-stl-desc{
+   font-family: sans-serif;
+   font-size: 1.5rem;
+}
+
+.font-stl-date{
+   font-size: 1rem;
+   color: whitesmoke;
+}
+
+/*delete button*/
+
+.delete-btn-align{
+	margin-left: 21rem;
+	padding: 10px;
+	background-color: whitesmoke;
+	border: none;
+}
+
+.delete-btn-align:hover{
+	background-color: red;
+}
+

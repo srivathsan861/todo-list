@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> <%= title %> </title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	 <!-- CDN of font awesome for icon -->
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	   <!-- css of the file -->
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+
+</head>
+<body>
+
+	<div id="todo-container">
+
+	<h1 class="align-center header-style">To-Do App</h1>
+    
+   <form action="/create-todo" method="post" >
+    
+   <!-- description input -->
+	<div id="description">
+		<h4>DESCRIPTION</h4>
+		<input  name="description" placeholder="What do you need to do?">
+	</div>
+
+   <!-- select catogary from drop-down box -->
+	<div id="category">
+		<h4>CATEGORY</h4>
+		<select id="check-cat" name="category">
+			<option selected disabled>Choose a Category</option>
+			<option>Personal</option>
+			<option>Work</option>
+			<option>School</option>
+			<option>Cleaning</option>
+			<option>Others</option>
+		</select>
+	</div>
+    
+    <!-- input due date -->
+	<div id="due-date">
+		<h4>DUE DATE</h4>
+		<input type="date" name="date" placeholder="DD/MM/YY">
+	</div>
+
+    
+    <!-- button to add task -->
+	<div class="add-btn">
+
+    	<button><i class="fas fa-plus"></i>ADD TASK</button>
+
+    </div>
+
+ </form>
+
+ <form action="/delete-todo" method="post">
+ 	
+ 	<!-- button to delete task -->
+    <button class="delete-btn-align"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+
+    <!-- iterating todo_list and displaying the data -->
+    <% for(let i of todo_list){ %>
+         
+         <div class="todo-list-item">
+         	
+         	<input class="checkbox-align" type="checkbox" value="<%= i._id %>" name="delete">
+         	<p class="make-inline-block font-stl-desc"> <%= i.description %></p> <br>
+         	<!-- <i class="far fa-calendar-alt "></i> -->
+            <p class="make-inline-block far fa-calendar-alt date-align font-stl-date"> <%= i.date %> </p>
+            <div class="cat-btn">
+            	<%= i.category %>
+            </div>
+            
+         </div> 
+
+     <% } %>
+
+    </forrm>
+
+    </div>
+
+     <!-- js of the file -->
+<script type="text/javascript" src="js/home.js"></script>  <!-- ../assets/js/jome.js,/js/home.js -->
+
+</body>
+</html>
